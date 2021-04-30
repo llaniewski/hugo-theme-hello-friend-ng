@@ -1,8 +1,8 @@
 <nav class="menu">
-    <ul class="menu__inner">
+    <ul id="navbar-nav" class="menu__inner">
         {{- $currentPage := . -}}
         {{ range .Site.Menus.main -}}
-            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+            <li id="nav-{{ .Identifier }}"><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
         {{- end }}
     </ul>
 </nav>

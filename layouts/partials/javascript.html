@@ -13,3 +13,8 @@
         <script src="{{ $val }}"></script>
     {{ end }}
 {{ end }}
+{{ range $val := $.Params.customJS }}
+    {{ if gt (len $val) 0 }}
+        <script src="{{ $val }}"></script>
+    {{ end }}
+{{ end }}
